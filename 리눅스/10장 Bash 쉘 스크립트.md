@@ -2,6 +2,8 @@
 
 **쉘 스크립트** : 명령어 및 유틸리티들을 적절히 사용하여 작성한 쉘에서 동작하는 프로그램
 
+<br>
+
 ### Bash 쉘 소개
 
 - 리눅스, 맥 OS X 등의 운영체제의 기본 쉘
@@ -9,6 +11,7 @@
 - . 으로 시작하는 숨겨진 파일 → ~/.bashrc, ~/.bash.profile
     - Bash 시작 과정 : /etc/profile → ~/.bash_profile → ~/.bashrc → 로그인 쉘 프롬포트
     
+<br>
 
 ### 별명 및 히스토리 기능
 
@@ -20,6 +23,8 @@
     - $ !n : 이벤트 번호가 n인 명령 재실행
     - $ !시작스트링 : 시작스트링으로 시작하는 최후 명령 재실행
     - $ !? 서브스트링 : 서브스트링을 포함하는 최후 명령 재실행
+
+<br>
 
 ### 변수
 
@@ -36,23 +41,32 @@
     - $ {name[*]} : 리스트 변수 name의 모든 원소 (* 말고 @도 됨)
     - $ {#name[*]} : 리스트 변수 name 내의 원소 개수 (* 말고 @도 됨)
 
+<br>
+
 ### 쉘 변수 - 지역변수와 환경변수
 
 쉘은 필요할 때마다 자식 쉘을 생성한다. 스크립트 수행, 후면 작업 실행, 명령어 실행 시 자식 쉘을 생성하여 자식 쉘로 하여금 해당 명령어를 실행하게 함.
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101644572/174438348-65d19957-f0b6-45a7-8339-6c86649b4e06.png)
+
 
 - 환경 변수는 값이 자식 프로세스에게 상속 / 지역 변수는 상속 불가
 - 사용자가 쉘 변수를 생성하면 기본적으로 모두 지역변수
 - $ export 변수 : 지역 변수를 환경 변수로 만들어줌
 
+<br>
+
 **사전 정의 환경변수 :** 의미가 미리 지정된 환경변수들
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101644572/174438352-559f664f-bc26-413d-9570-99fd117171db.png)
+
+<br>
 
 **사전 정의 지역변수**
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101644572/174438354-b19057e6-9ef6-4512-a278-d46e6d0e2d85.png)
+
+<br>
 
 ## Bash 쉘 스크립트
 
@@ -67,25 +81,37 @@
 - **조건식의 형태**는 **[ 조건식 ]** 또는 **(( 조건식 ))** 형태로 해야됨
 - 리커전으로 자기 자신도 호출 가능
 
+<br>
+
 ### 변수 타입 선언
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101644572/174438368-bf4966bb-72b9-487f-a130-f3b058c0fd21.png)
+
+<br>
 
 ### 비교 연산
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101644572/174438372-a2881c46-ad77-40f1-936c-643dcd3e2024.png)
+
+<br>
 
 ### 문자열 비교 연산
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101644572/174438379-d4674d17-caa0-4a35-8427-f66ab5db8d6e.png)
+
+<br>
 
 ### 파일 관련 연산
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101644572/174438381-a7f6f969-4efd-45ed-95c0-686b02bf4ebc.png)
+
+<br>
 
 ### 산술 연산자
 
-![Untitled](10%E1%84%8C%E1%85%A1%E1%86%BC%20Bash%20%E1%84%89%E1%85%B0%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B8%E1%84%90%E1%85%B3%20bda1ef44a1c54b22a9a4b29bcbc2a9a1/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/101644572/174438387-df8d0e30-90ae-45e7-8332-dae12874aeed.png)
+
+<br>
 
 ### 조건문
 
@@ -131,6 +157,8 @@ else
 fi
 ```
 
+<br>
+
 **case 문**
 
 ```bash
@@ -156,6 +184,8 @@ case $grade in
 	*) echo 노력 요함;;
 esac
 ```
+
+<br>
 
 ### 반복문
 
@@ -232,6 +262,8 @@ done
 echo 파일: $fcount 디렉터리: $dcount 기타: $others
 ```
 
+<br>
+
 **while 문**
 
 ```bash
@@ -269,6 +301,8 @@ do
 done
 ```
 
+<br>
+
 ### 함수 정의
 
 **함수 정의**
@@ -279,6 +313,8 @@ done
 	명령어리스트
 }
 ```
+
+<br>
 
 **함수 호출**
 
