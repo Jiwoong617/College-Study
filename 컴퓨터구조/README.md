@@ -1,2 +1,3 @@
 - [컴퓨터 시스템 개요](https://joe0617160.tistory.com/31)
 - [CPU의 구조와 기능](https://joe0617160.tistory.com/32)
+- [명령어 세트](https://joe0617160.tistory.com/33)
